@@ -26,7 +26,7 @@ export function LoadingOverlay({ show = false, message = 'Loading...' }: Loading
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-900/20 backdrop-blur-[1px]">
+    <div className="fixed inset-0 z-70 flex items-center justify-center bg-slate-900/20 backdrop-blur-[1px]">
       <div className="w-[min(92vw,420px)] overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-2xl">
         <div className="relative h-1.5 w-full overflow-hidden bg-blue-100">
           <div className="absolute inset-0 h-full w-1/2 -translate-x-full animate-[globalLoading_1.1s_ease-in-out_infinite] bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400" />
