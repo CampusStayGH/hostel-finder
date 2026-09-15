@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <>
+    
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -26,7 +26,7 @@ function App() {
       </Routes>
     </BrowserRouter>
       
-    </>
+    
   )
 }
 
