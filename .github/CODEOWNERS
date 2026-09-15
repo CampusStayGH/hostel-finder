@@ -54,7 +54,7 @@ docs/architecture/ @devops
 # ============================================================
 
 # Node.js / Express backend
-backend/ @backend
+backend/ @backend @devops
 
 # Backend Docker configuration
 backend/Dockerfile @devops
@@ -71,7 +71,7 @@ docs/api/ @frontend
 # ============================================================
 
 # React / TypeScript frontend
-frontend/ @frontend
+frontend/ @frontend @devops
 
 # Frontend Docker configuration
 frontend/Dockerfile @devops
