@@ -118,7 +118,10 @@ const VALUE_PROPS = [
 export default function HomePage() {
   const [location, setLocation] = useState('');
   const [checkIn, setCheckIn] = useState('');
+<<<<<<< Updated upstream
   const [checkOut, setCheckOut] = useState('');
+=======
+>>>>>>> Stashed changes
   const [guests, setGuests] = useState('1 Guest');
 
   const handleSearch = (e: React.FormEvent) => {
@@ -154,10 +157,17 @@ export default function HomePage() {
             </div>
 
             {/* Floating Search Bar Form */}
+<<<<<<< Updated upstream
             <div className="mx-4 mb-4 rounded-2xl bg-white p-3 shadow-2xl sm:mx-8 sm:mb-8 lg:mx-12 lg:p-4">
               <form
                 onSubmit={handleSearch}
                 className="grid grid-cols-1 gap-2 md:grid-cols-4 md:gap-3 lg:grid-cols-5 items-center"
+=======
+            <div className="mx-4 mb-4 rounded-md bg-white p-3 shadow-2xl sm:mx-8 sm:mb-8 lg:mx-12 lg:p-4">
+              <form
+                onSubmit={handleSearch}
+                className="grid grid-cols-1 gap-2 md:grid-cols-4 md:gap-3 lg:grid-cols-4 items-center"
+>>>>>>> Stashed changes
               >
                 {/* Location Input */}
                 <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-3.5 py-2.5 transition focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100">
@@ -177,6 +187,12 @@ export default function HomePage() {
                 </div>
 
                 {/* Check-In Input */}
+<<<<<<< Updated upstream
+=======
+                
+
+                {/* Check-Out Input */}
+>>>>>>> Stashed changes
                 <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-3.5 py-2.5 transition focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100">
                   <Calendar className="h-5 w-5 text-slate-400 shrink-0" />
                   <div className="w-full text-left">
@@ -192,6 +208,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
+<<<<<<< Updated upstream
                 {/* Check-Out Input */}
                 <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-3.5 py-2.5 transition focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100">
                   <Calendar className="h-5 w-5 text-slate-400 shrink-0" />
@@ -208,6 +225,8 @@ export default function HomePage() {
                   </div>
                 </div>
 
+=======
+>>>>>>> Stashed changes
                 {/* Guests / Capacity */}
                 <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-3.5 py-2.5 transition focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100">
                   <Users className="h-5 w-5 text-slate-400 shrink-0" />
