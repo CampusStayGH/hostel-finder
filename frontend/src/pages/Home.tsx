@@ -1,5 +1,5 @@
 import React from 'react';
-import HostelCard from '../Components/HostelCard';
+import HostelCard from '../Components/UI/HostelCard'
 import {
   CheckCircle2,
   Star,
