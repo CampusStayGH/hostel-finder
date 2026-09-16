@@ -1,6 +1,9 @@
 import { Compass, Home, ArrowLeft } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function NotFoundPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="h-screen bg-slate-50 px-6 py-12 flex justify-around items-center">
       <div className="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm">
@@ -17,20 +20,19 @@ export default function NotFoundPage() {
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <button
             type="button"
-            onClick={() => window.history.back()}
+            onClick={() => navigate(-1)}
             className="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
           >
             <ArrowLeft className="h-4 w-4" />
             Go Back
           </button>
-          <button
-            type="button"
-            onClick={() => window.location.assign('/')}
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 rounded-xl bg-blue-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-800"
           >
             <Home className="h-4 w-4" />
             Home
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   CheckCircle2,
   Star,
@@ -133,12 +134,12 @@ export default function HomePage() {
               Discover the best hostels near you with verified listings, real reviews, and easy booking.
             </p>
             <div className="mt-6">
-              <a
-                href="/hostels"
+              <Link
+                to="/hostels"
                 className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-md shadow-blue-500/25 transition hover:bg-blue-700 active:scale-[0.98]"
               >
                 Explore Hostels <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -178,12 +179,12 @@ export default function HomePage() {
               Check out some of the most booked hostels on our platform.
             </p>
           </div>
-          <a
-            href="/hostels"
+          <Link
+            to="/hostels"
             className="flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700"
           >
             View All <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -237,13 +238,13 @@ export default function HomePage() {
                     <span className="text-xs text-slate-400 font-normal"> / year</span>
                   </div>
 
-                  <a
-                    href={`/hostels/${hostel.id}`}
+                  <Link
+                    to={`/hostels/${hostel.id}`}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition hover:bg-blue-600 hover:text-white"
                     aria-label={`View ${hostel.name}`}
                   >
                     <ArrowRight className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

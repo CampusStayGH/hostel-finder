@@ -1,5 +1,6 @@
 
 import { formatApiError, type ApiErrorPayload } from '../../lib/error'; // adjust path to where formatApiError is located
+import { Link } from 'react-router-dom';
 
 export interface LoadingStateProps {
   message?: string;
@@ -92,22 +93,20 @@ export function ErrorState({ message = 'Something went wrong.', status }: ErrorS
     <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-700">
       <p>{text}</p>
       {isServerError && (
-        <button
-          type="button"
-          onClick={() => window.location.assign('/error/500')}
+        <Link
+          to="/error/500"
           className="mt-3 rounded-md border border-red-300 bg-white px-3 py-1.5 text-xs font-semibold text-red-700 transition hover:bg-red-100"
         >
           Open Error Page
-        </button>
+        </Link>
       )}
       {isNotFoundError && (
-        <button
-          type="button"
-          onClick={() => window.location.assign('/not-found')}
+        <Link
+          to="/not-found"
           className="mt-3 rounded-md border border-red-300 bg-white px-3 py-1.5 text-xs font-semibold text-red-700 transition hover:bg-red-100"
         >
           Open Not Found Page
-        </button>
+        </Link>
       )}
     </div>
   );
