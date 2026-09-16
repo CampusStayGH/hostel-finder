@@ -17,7 +17,7 @@ permissions:
 jobs:
 
   # ==========================================
-  # BACKEND - NODE.JS / EXPRESS
+  # BACKEND CI
   # ==========================================
   backend:
     name: Backend CI - Node.js / Express
@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: backend/package-lock.json
 
@@ -52,7 +52,7 @@ jobs:
 
 
   # ==========================================
-  # FRONTEND - REACT / TYPESCRIPT
+  # FRONTEND CI
   # ==========================================
   frontend:
     name: Frontend CI - React / TypeScript
@@ -69,7 +69,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: frontend/package-lock.json
 

@@ -1,0 +1,157 @@
+# ============================================================
+# Hostel Finder - CODEOWNERS
+# ============================================================
+#
+# CODEOWNERS defines who should review changes to specific
+# parts of the project.
+
+# ============================================================
+
+
+# ============================================================
+# DEFAULT / GENERAL
+# ============================================================
+
+# Project maintainers / DevOps team
+* @devops
+
+
+# ============================================================
+# DEVOPS / INFRASTRUCTURE
+# ============================================================
+
+# GitHub Actions / CI/CD
+.github/ @devops @cybersecurity
+
+# Docker
+Dockerfile @devops
+**/Dockerfile @devops
+docker-compose.yml @devops
+infrastructure/docker/ @devops
+
+# AWS / Infrastructure
+infrastructure/ @devops
+
+# Nginx
+infrastructure/nginx/ @devops
+
+# Deployment scripts
+infrastructure/scripts/ @devops
+
+# Monitoring
+monitoring/ @devops
+
+# Deployment documentation
+docs/deployment/ @devops
+docs/operations/ @devops
+
+# Architecture documentation
+docs/architecture/ @devops
+
+
+# ============================================================
+# BACKEND
+# ============================================================
+
+# Node.js / Express backend
+backend/ @backend @devops
+
+# Backend Docker configuration
+backend/Dockerfile @devops
+
+# Backend documentation
+backend/README.md @backend
+
+# Backend API documentation
+docs/api/ @frontend
+
+
+# ============================================================
+# FRONTEND
+# ============================================================
+
+# React / TypeScript frontend
+frontend/ @frontend @devops
+
+# Frontend Docker configuration
+frontend/Dockerfile @devops
+
+# Frontend documentation
+frontend/README.md @frontend
+
+
+# ============================================================
+# CYBERSECURITY
+# ============================================================
+
+# Security configuration
+security/ @cybersecurity
+
+# Security documentation
+docs/security/ @cybersecurity
+
+# Security policy
+SECURITY.md @cybersecurity
+
+# GitHub security workflow
+.github/workflows/security.yml @cybersecurity @devops
+
+# Dependency management
+.github/dependabot.yml @cybersecurity @devops
+
+
+# ============================================================
+# DATA ANALYTICS
+# ============================================================
+
+# Analytics / data-related code
+analytics/ @data_analytics
+
+# Data processing
+data/ @data_analytics
+
+# Analytics documentation
+docs/analytics/ @data_analytics
+
+# Data analysis notebooks
+notebooks/ @data_analytics
+
+# Database documentation
+docs/architecture/database-architecture.md @data_analytics @backend
+
+# Database migrations
+database/ @backend @data_analytics
+
+
+# ============================================================
+# SHARED PROJECT FILES
+# ============================================================
+
+# Main README
+README.md @devops
+
+# Contribution guidelines
+CONTRIBUTING.md @devops
+
+# Code of Conduct
+CODE_OF_CONDUCT.md @devops
+
+# Environment template
+.env.example @devops @backend @frontend @cybersecurity
+
+# Git ignore
+.gitignore @devops
+
+
+# ============================================================
+# CI/CD
+# ============================================================
+
+.github/workflows/ci.yml @devops
+.github/workflows/cd.yml @devops
+
+# Pull request template
+.github/PULL_REQUEST_TEMPLATE.md @devops
+
+# Issue templates
+.github/ISSUE_TEMPLATE/ @devops
