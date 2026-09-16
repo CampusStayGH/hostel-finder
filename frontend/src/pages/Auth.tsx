@@ -73,7 +73,7 @@ const Auth: React.FC = () => {
     <div className="flex min-h-screen items-center justify-center bg-slate-50 px-5 py-10">
       <Card
         className="w-full max-w-md shadow-lg"
-        title="Welcome to TaskFlow"
+        title="Welcome to HostelScout"
         subtitle="Sign in or create an account"
       >
         <div className="mb-6 grid grid-cols-2 gap-2 rounded-lg bg-slate-100 p-1">
