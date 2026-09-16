@@ -1,5 +1,5 @@
 import React from 'react';
-import HostelCard from '../components/HostelCard';
+import { Link } from 'react-router-dom';
 import {
   CheckCircle2,
   Star,
@@ -83,8 +83,6 @@ const FEATURED_HOSTELS: HostelCardData[] = [
   },
 ];
 
-
-
 const VALUE_PROPS = [
   {
     icon: CheckCircle2,
@@ -136,12 +134,12 @@ export default function HomePage() {
               Discover the best hostels near you with verified listings, real reviews, and easy booking.
             </p>
             <div className="mt-6">
-              <a
-                href="/hostels"
+              <Link
+                to="/hostels"
                 className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-md shadow-blue-500/25 transition hover:bg-blue-700 active:scale-[0.98]"
               >
                 Explore Hostels <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -181,18 +179,76 @@ export default function HomePage() {
               Check out some of the most booked hostels on our platform.
             </p>
           </div>
-          <a
-            href="/hostels"
+          <Link
+            to="/hostels"
             className="flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700"
           >
             View All <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {FEATURED_HOSTELS.map((hostel) => (
-    <HostelCard key={hostel.id} {...hostel} />
-  ))}
+          {FEATURED_HOSTELS.map((hostel) => (
+            <div
+              key={hostel.id}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs transition hover:shadow-lg hover:-translate-y-0.5"
+            >
+              <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                <img
+                  src={hostel.image}
+                  alt={hostel.name}
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                />
+                <div className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-white/95 px-2 py-0.5 text-xs font-bold text-slate-800 shadow-sm backdrop-blur-xs">
+                  <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                  {hostel.rating.toFixed(1)}
+                </div>
+              </div>
+
+              <div className="flex flex-1 flex-col justify-between p-4">
+                <div>
+                  <h3 className="font-bold text-slate-900 line-clamp-1 group-hover:text-blue-600">
+                    {hostel.name}
+                  </h3>
+                  <p className="mt-1 text-xs text-slate-500 line-clamp-1">
+                    {hostel.location}
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {hostel.tags.map((tag, tIdx) => {
+                      const TagIcon = tag.icon;
+                      return (
+                        <span
+                          key={tIdx}
+                          className="flex items-center gap-1 rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 text-[11px] font-medium text-slate-600"
+                        >
+                          <TagIcon className="h-3 w-3 text-slate-400" />
+                          {tag.label}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3">
+                  <div>
+                    <span className="text-base font-bold text-slate-900">
+                      {hostel.currency} {hostel.pricePerYear.toLocaleString()}
+                    </span>
+                    <span className="text-xs text-slate-400 font-normal"> / year</span>
+                  </div>
+
+                  <Link
+                    to={`/hostels/${hostel.id}`}
+                    className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition hover:bg-blue-600 hover:text-white"
+                    aria-label={`View ${hostel.name}`}
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
