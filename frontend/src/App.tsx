@@ -11,6 +11,8 @@ import Explore from './pages/Explore';
 import Saved from './pages/Saved';
 import Profile from './pages/Profile';
 import ErrorPage from './pages/ErrorPage';
+import AdminHostelApprovalDashboard from './pages/AdminDashboard';
+import CreateHostelPage from './pages/CreateHostel';
 function App() {
   return (
     <>
@@ -29,6 +31,8 @@ function App() {
         <Route path="/error/500" element={<ErrorPage />} />
         <Route path="/not-found" element={<NotFoundPage />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path='/dashboard' element={<AdminHostelApprovalDashboard/>}></Route>
+        <Route path='/listhostel' element={<CreateHostelPage/>}></Route>
       </Routes>
     </>
   )

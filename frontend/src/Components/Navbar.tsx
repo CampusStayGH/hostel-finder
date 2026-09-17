@@ -84,7 +84,9 @@ const Navbar: React.FC = () => {
               variant="secondary"
               className="border-slate-300 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:border-slate-400 hover:bg-slate-50 lg:inline-flex outline-none focus:outline-none focus:ring-0"
             >
-              List a Hostel
+             <Link to='/listhostel'>
+             List a Hostel
+             </Link> 
             </Button>
 
             {/* Profile Avatar / Login */}
