@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import {
   Home,
   Building2,
@@ -27,6 +27,7 @@ const navLinks: NavItem[] = [
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isLinkActive = (href: string) => {
     if (href === '/') {
@@ -83,6 +84,7 @@ const Navbar: React.FC = () => {
             <Button
               variant="secondary"
               className="border-slate-300 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:border-slate-400 hover:bg-slate-50 lg:inline-flex outline-none focus:outline-none focus:ring-0"
+              onClick={() => navigate('/auth')}
             >
              <Link to='/listhostel'>
              List a Hostel
@@ -175,7 +177,10 @@ const Navbar: React.FC = () => {
               <Button
                 variant="primary"
                 className="w-full justify-center border border-blue-600 py-2 text-sm font-semibold shadow-sm outline-none focus:outline-none focus:ring-0"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  navigate('/auth');
+                }}
               >
                 List a Hostel
               </Button>
