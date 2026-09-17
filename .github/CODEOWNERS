@@ -21,29 +21,29 @@
 # ============================================================
 
 # GitHub Actions / CI/CD
-.github/ @devops @cybersecurity
+.github/ @CampusStay/devops @CampusStay/cybersecurity
 
 # Docker
-Dockerfile @devops
-**/Dockerfile @devops
-docker-compose.yml @devops
-infrastructure/docker/ @devops
+Dockerfile @CampusStay/devops
+**/Dockerfile @CampusStay/devops
+docker-compose.yml @CampusStay/devops
+infrastructure/docker/ @CampusStay/devops
 
 # AWS / Infrastructure
-infrastructure/ @devops
+infrastructure/ @CampusStay/devops
 
 # Nginx
-infrastructure/nginx/ @devops
+infrastructure/nginx/ @CampusStay/devops
 
 # Deployment scripts
-infrastructure/scripts/ @devops
+infrastructure/scripts/ @CampusStay/devops
 
 # Monitoring
-monitoring/ @devops
+monitoring/ @CampusStay/devops
 
 # Deployment documentation
-docs/deployment/ @devops
-docs/operations/ @devops
+docs/deployment/ @CampusStay/devops
+docs/operations/ @CampusStay/devops
 
 # Architecture documentation
 docs/architecture/ @devops
@@ -54,7 +54,7 @@ docs/architecture/ @devops
 # ============================================================
 
 # Node.js / Express backend
-backend/ @backend @devops
+backend/ @CampusStay/backend @CampusStay/devops
 
 # Backend Docker configuration
 backend/Dockerfile @devops
