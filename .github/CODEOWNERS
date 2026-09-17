@@ -13,7 +13,7 @@
 # ============================================================
 
 # Project maintainers / DevOps team
-* @devops
+* @CampusStayGH/devops
 
 
 # ============================================================
@@ -21,32 +21,32 @@
 # ============================================================
 
 # GitHub Actions / CI/CD
-.github/ @CampusStay/devops @CampusStay/cybersecurity
+.github/ @CampusStayGH/devops @CampusStayGH/cybersecurity
 
 # Docker
-Dockerfile @CampusStay/devops
-**/Dockerfile @CampusStay/devops
+Dockerfile @CampusStayGH/devops
+**/Dockerfile @CampusStayGH/devops
 docker-compose.yml @CampusStay/devops
-infrastructure/docker/ @CampusStay/devops
+infrastructure/docker/ @CampusStayGH/devops
 
 # AWS / Infrastructure
-infrastructure/ @CampusStay/devops
+infrastructure/ @CampusStayGH/devops
 
 # Nginx
-infrastructure/nginx/ @CampusStay/devops
+infrastructure/nginx/ @CampusStayGH/devops
 
 # Deployment scripts
-infrastructure/scripts/ @CampusStay/devops
+infrastructure/scripts/ @CampusStayGH/devops
 
 # Monitoring
-monitoring/ @CampusStay/devops
+monitoring/ @CampusStayGH/devops
 
 # Deployment documentation
-docs/deployment/ @CampusStay/devops
-docs/operations/ @CampusStay/devops
+docs/deployment/ @CampusStayGH/devops
+docs/operations/ @CampusStayGH/devops
 
 # Architecture documentation
-docs/architecture/ @devops
+docs/architecture/ @CampusStayGH/devops
 
 
 # ============================================================
@@ -54,13 +54,13 @@ docs/architecture/ @devops
 # ============================================================
 
 # Node.js / Express backend
-backend/ @CampusStay/backend @CampusStay/devops
+backend/ @CampusStayGH/backend @CampusStayGH/devops
 
 # Backend Docker configuration
-backend/Dockerfile @devops
+backend/Dockerfile @CampusStayGH/devops
 
 # Backend documentation
-backend/README.md @backend
+backend/README.md @CampusStayGH/backend
 
 # Backend API documentation
 docs/api/ @frontend
