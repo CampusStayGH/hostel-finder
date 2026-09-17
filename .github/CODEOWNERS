@@ -13,7 +13,7 @@
 # ============================================================
 
 # Project maintainers / DevOps team
-* @devops
+* @CampusStayGH/devops
 
 
 # ============================================================
@@ -21,32 +21,31 @@
 # ============================================================
 
 # GitHub Actions / CI/CD
-.github/ @devops @cybersecurity
+.github/ @CampusStayGH/devops @CampusStayGH/cybersecurity
 
 # Docker
-Dockerfile @devops
-**/Dockerfile @devops
-docker-compose.yml @devops
-infrastructure/docker/ @devops
+Dockerfile @CampusStayGH/devops
+**/Dockerfile @CampusStayGH/devops
+docker-compose.yml @CampusStayGH/devops
 
 # AWS / Infrastructure
-infrastructure/ @devops
+infrastructure/ @CampusStayGH/devops
 
 # Nginx
-infrastructure/nginx/ @devops
+infrastructure/nginx/ @CampusStayGH/devops
 
 # Deployment scripts
-infrastructure/scripts/ @devops
+infrastructure/scripts/ @CampusStayGH/devops
 
 # Monitoring
-monitoring/ @devops
+monitoring/ @CampusStayGH/devops
 
 # Deployment documentation
-docs/deployment/ @devops
-docs/operations/ @devops
+docs/deployment/ @CampusStayGH/devops
+docs/operations/ @CampusStayGH/devops
 
 # Architecture documentation
-docs/architecture/ @devops
+docs/architecture/ @CampusStayGH/devops
 
 
 # ============================================================
@@ -54,16 +53,16 @@ docs/architecture/ @devops
 # ============================================================
 
 # Node.js / Express backend
-backend/ @backend @devops
+backend/ @CampusStayGH/backend @CampusStayGH/devops
 
 # Backend Docker configuration
-backend/Dockerfile @devops
+backend/Dockerfile @CampusStayGH/devops
 
 # Backend documentation
-backend/README.md @backend
+backend/README.md @CampusStayGH/backend
 
 # Backend API documentation
-docs/api/ @frontend
+docs/api/ @CampusStayGH/frontend
 
 
 # ============================================================
@@ -71,13 +70,13 @@ docs/api/ @frontend
 # ============================================================
 
 # React / TypeScript frontend
-frontend/ @frontend @devops
+frontend/ @CampusStayGH/frontend @CampusStayGH/devops
 
 # Frontend Docker configuration
-frontend/Dockerfile @devops
+frontend/Dockerfile @CampusStayGH/devops
 
 # Frontend documentation
-frontend/README.md @frontend
+frontend/README.md @CampusStayGH/frontend
 
 
 # ============================================================
@@ -85,19 +84,19 @@ frontend/README.md @frontend
 # ============================================================
 
 # Security configuration
-security/ @cybersecurity
+security/ @CampusStayGH/cybersecurity
 
 # Security documentation
-docs/security/ @cybersecurity
+docs/security/ @CampusStayGH/cybersecurity
 
 # Security policy
-SECURITY.md @cybersecurity
+SECURITY.md @CampusStayGH/cybersecurity
 
 # GitHub security workflow
-.github/workflows/security.yml @cybersecurity @devops
+.github/workflows/security.yml @CampusStayGH/cybersecurity @CampusStayGH/devops
 
 # Dependency management
-.github/dependabot.yml @cybersecurity @devops
+.github/dependabot.yml @CampusStayGH/cybersecurity @CampusStayGH/devops
 
 
 # ============================================================
@@ -105,22 +104,19 @@ SECURITY.md @cybersecurity
 # ============================================================
 
 # Analytics / data-related code
-analytics/ @data_analytics
+analytics/ @CampusStayGH/data_analytics
 
 # Data processing
-data/ @data_analytics
+data/ @CampusStayGH/data_analytics
 
 # Analytics documentation
-docs/analytics/ @data_analytics
-
-# Data analysis notebooks
-notebooks/ @data_analytics
+docs/analytics/ @CampusStayGH/data_analytics
 
 # Database documentation
-docs/architecture/database-architecture.md @data_analytics @backend
+docs/architecture/database-architecture.md @CampusStayGH/data_analytics @CampusStayGH/backend
 
 # Database migrations
-database/ @backend @data_analytics
+database/ @CampusStayGH/backend @CampusStayGH/data_analytics
 
 
 # ============================================================
@@ -128,30 +124,30 @@ database/ @backend @data_analytics
 # ============================================================
 
 # Main README
-README.md @devops
+README.md @CampusStayGH/devops
 
 # Contribution guidelines
-CONTRIBUTING.md @devops
+CONTRIBUTING.md @CampusStayGH/devops
 
 # Code of Conduct
-CODE_OF_CONDUCT.md @devops
+CODE_OF_CONDUCT.md @CampusStayGH/devops
 
 # Environment template
-.env.example @devops @backend @frontend @cybersecurity
+.env.example @CampusStayGH/devops @CampusStayGH/backend @CampusStayGH/frontend @CampusStayGH/cybersecurity
 
 # Git ignore
-.gitignore @devops
+.gitignore @CampusStayGH/devops
 
 
 # ============================================================
 # CI/CD
 # ============================================================
 
-.github/workflows/ci.yml @devops
-.github/workflows/cd.yml @devops
+.github/workflows/ci.yml @CampusStayGH/devops
+.github/workflows/cd.yml @CampusStayGH/devops
 
 # Pull request template
-.github/PULL_REQUEST_TEMPLATE.md @devops
+.github/PULL_REQUEST_TEMPLATE.md @CampusStayGH/devops
 
 # Issue templates
-.github/ISSUE_TEMPLATE/ @devops
+.github/ISSUE_TEMPLATE/ @CampusStayGH/devops
