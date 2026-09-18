@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Star, ArrowRight } from 'lucide-react';
+import { Bookmark, BookmarkCheck } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../auth/AuthContext';
 
 export interface HostelTag {
   label: string;
@@ -28,6 +31,17 @@ export default function HostelCard({
   image,
   tags = [],
 }: HostelCardProps) {
+  const { user, isSaved, toggleSavedHostel } = useAuth();
+  const navigate = useNavigate();
+  const saved = isSaved(id);
+  const handleSave = () => {
+    if (!user) {
+      navigate('/auth', { state: { from: { pathname: `/hostels/${id}` } } });
+      return;
+    }
+    toggleSavedHostel({ id, name, location, rating, pricePerYear, currency, image });
+  };
+
   return (
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs transition hover:-translate-y-0.5 hover:shadow-lg">
       {/* Thumbnail & Rating Overlay */}
@@ -41,6 +55,9 @@ export default function HostelCard({
           <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
           {rating.toFixed(1)}
         </div>
+        <button type="button" onClick={handleSave} aria-label={saved ? `Remove ${name} from saved hostels` : `Save ${name} for later`} className="absolute top-3 left-3 rounded-full bg-white/95 p-2 text-blue-600 shadow-sm hover:bg-blue-600 hover:text-white">
+          {saved ? <BookmarkCheck className="h-4 w-4" /> : <Bookmark className="h-4 w-4" />}
+        </button>
       </div>
 
       {/* Details Body */}
