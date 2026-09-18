@@ -5,7 +5,6 @@ import {
   CheckCircle2,
   PencilLine,
   BedDouble,
-  Sparkles,
   Upload,
 } from 'lucide-react';
 

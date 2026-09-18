@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   CheckCircle,
   XCircle,
@@ -7,7 +7,6 @@ import {
   Building2,
   Phone,
   Mail,
-  ExternalLink,
   Filter,
   Check,
   X,

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Compass, MapPin, ArrowRight, Building, GraduationCap } from 'lucide-react';
 
